@@ -142,35 +142,25 @@
         Participants can generate different format of the description of the hydroxyl's hamiltonian by prefered tools, but we restricted the fermionic mapping method should be the Jordan-Wigner mapping [2],
         which should be 12 qubits and 631 pauli strings.
 		  </p>
-		  <p>
-		    The name of each text file contains the patient ID, labels, and index separated by a dash (i.e., ”-”). For example, for the file 
-			“S001-VT-1.txt”, “S001” represents the subject number, “VT” represents the type of arrhythmias or rhythm (refer to the provided 
-			<a href="https://github.com/tinymlcontest/tinyml_contest2022_demo_example/blob/master/label_list.csv"> label list</a>), “1” represents the index of the segments. 
-		  </p>
+
           <h5>
-            5.MCU Platform and Cube.AI
+            5. IBM Qiskit Platform, System & Noise Model from Real Quantum Processor Backend
           </h5>
           <p>
-            The development board required in the Challenge is NUCLEO-L432KC, which is with ARM Cortex-M4 core at 80 MHz, 258 Kbytes of 
-            flash memory, 64 Kbytes of SRAM, and embedded ST-LINK/V2-1 debugger/programmer. The development board also supports STM32 
-            X-Cube-AI, which is an STM32Cube Expansion Package part of the STM32Cube. AI ecosystem and extending STM32CubeMX 
-            capabilities with automatic conversion of pre-trained Artificial Intelligence algorithms, including Neural Network and 
-            classical Machine Learning models, and integration of generated optimized library into the user's project. The practical 
-            performances of the AI/ML learning algorithm will be deployed and evaluated on the development board with the help of 
-            X-Cube-AI. Note that you do not have to utilize the tool X-Cube-AI to implement the project on NUCLEO-L432KC. But we will
-			need to be able to evaluate your model performance in a straightforward way.
+            We acknowledge the use of IBM Quantum services for this contest. Qiskit [3] is an open-source quantum computing framework primarily developed by IBM. 
+            It offers tools for creating and manipulating quantum programs and running them on prototype quantum devices and simulators. 
+            Designed with modularity in mind, Qiskit provides components that cater to all aspects of quantum computing, from foundational elements to more advanced quantum algorithms.
+            In the contemporary realm of quantum computing, noise poses a significant challenge [4].  
+            As such, we urge all participants to consider the inherent noise when designing their quantum algorithms or circuits. 
+            Qiskit [3] offers tools that facilitate the simulation of quantum algorithms or circuits as if executed on an actual quantum device, complete with the associated noise. 
+            Simulating a quantum system, complemented with a noise model, is imperative to gain insights into the potential performance of quantum algorithms on current NISQ (Noisy Intermediate-Scale Quantum) devices [4]. 
+            We acknowledge that while participants might be inclined to optimize basis gates at the pulse level to curtail the duration of the quantum circuit and thereby conserve quantum resources [5], 
+            characterizing a time-dependent noise model from a real quantum machine poses challenges for us. We regretfully must resort to using the standard gate-based noise model for evaluating circuits. 
+            However, in the spirit of fairness, we will compute the relative decoherence fidelity and adjust your circuit performance accordingly [6].
           </p>
           <p>
-            The board only costs around $10 and we anticipate most participating teams can easily get them online. However, if you do 
-            need support, please contact us.
-          </p>
-          <p>
-            <a href="https://www.mouser.com/ProductDetail/STMicroelectronics/NUCLEO-L432KC?qs=qzCNEk%252BRr%252BajjPvxjwWK5g%3D%3D">
-              Purchase Link (mouser)<br> 
-			<a href="https://www.digikey.com/en/products/detail/stmicroelectronics/NUCLEO-L432KC/6132763">
-			  Purchase Link (digikey)<br>
-              <img border="0" src="Figures/4.jpg" ><br>
-            </a>
+            The IBM qiskit platform is open for public and easy to access online. However, if you do 
+            need support, please contact us. <a href="https://qiskit.org/"></a>
           </p>
 		  <h5>
 		    6.Scoring
@@ -224,7 +214,7 @@
 		    7.Example Code
 		  </h5>
 		  <p>
-			We have provided an <a href="https://github.com/tinymlcontest/tinyml_contest2022_demo_example"> example algorithm </a> to illustrate how to train the model with PyTorch and evaluate the comprehensive performances in terms of detection performance, flash occupation and latency. 
+			We have provided an <a href="/"> example algorithm </a> to illustrate how to train the model. 
 		  </p>
 		  <h5>
             8.References
@@ -236,10 +226,10 @@
             [2] Tranter, Andrew, et al. "A comparison of the Bravyi-Kitaev and Jordan-Wigner transformations for the quantum simulation of quantum chemistry." Journal of chemical theory and computation 14.11 (2018): 5617-5630.
           </p>
           <p>
-            [3] Madhavan, M. and Friedman, P.A., 2013. Optimal programming of implantable cardiac-defibrillators. Circulation, 128(6), pp.659-672.
+            [3] Aleksandrowicz, Gadi, et al. "Qiskit: An open-source framework for quantum computing." Accessed on: Mar 16 (2019).
           </p>
           <p>
-            [4] Jia, Z., Wang, Z., Hong, F., Ping, L., Shi, Y. and Hu, J., Learning to Learn Personalized Neural Network for Ventricular Arrhythmias Detection on Intracardiac EGMs. International Joint Conferences on Artificial Intelligence Organization (IJCAI-21), pp. 2606-2613.
+            [4] Preskill, John. "Quantum computing in the NISQ era and beyond." Quantum 2 (2018): 79.
           </p>
           <p>
             [5] Acharya, U. Rajendra, et al. "Automated identification of shockable and non-shockable life-threatening ventricular arrhythmias using convolutional neural network." Future Generation Computer Systems 79 (2018): 952-959.
