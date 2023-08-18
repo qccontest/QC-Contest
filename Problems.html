@@ -128,24 +128,19 @@
             3.Data
           </h5>
           <p>
-            The data contains single-lead IEGM recordings retrieved from the lead RVA-Bi of ICD. Each recording is 5-second in length with 
-			250 Hz sampling rate. The recordings are pre-processed by applying a band-pass filter with a frequency of a pass-band frequency 
-			of 15 Hz and a stop-band frequency of 55 Hz. Each IEGM recording has one label that describes the cardiac abnormalities (or normal 
-			sinus rhythm). Here, for the classification of <b>VAs</b>, it contains the labels including <i>VT (Ventricular Tachycardia), VFb (Ventricular Fibrillation), VFt (Ventricular Flutter)</i>. 
-			For the <b>non-VAs</b>, the segments are labeled with the one other than <i>VT, VFb, VFt</i>. 
-			We have provided the <a href="https://github.com/tinymlcontest/tinyml_contest2022_demo_example/blob/master/label_list.csv"> lists of labels </a> for references.
-          </p>
-          <p>
-            The IEGM recordings are partitioned patient-wisely in the training and testing set. 85% of the subjects’ IEGM recordings are 
-            released as training material. The rest 15% of the subjects’ IEGM recordings will be utilized to evaluate the detection 
-            performances of the submitted algorithm. The dataset for final evaluation will remain private and will not be released. 
+            The data provided for this challenge revolves around the central theme of drug discovery, focusing on the fundamental quantum mechanics of the hydroxyl (·OH). 
+            As a pivotal entity in numerous drug interactions and physiological processes, an intricate understanding of the hydroxyl radical is crucial. 
+            To aid participants in this endeavor, we've curated a specialized dataset tailored to encapsulate the of the hydroxyl's hamiltonian.
+
+			      We have provided the <a href="https://github.com/tinymlcontest/tinyml_contest2022_demo_example/blob/master/label_list.csv">.
           </p>
 		  <h5>
 		    4.Data Format
 		  </h5>
 		  <p>
-		    All data is formatted in text. Each text file contains a 5-second IEGM recording with the sampling point on each row of 1,250 
-			in total length. The value of each sampling point is stored as a floating-point number.
+		    All data is formatted in text. The text file contains the Pauli strings and corresponding coefficiencies of the hydroxyl's hamiltonian by Jordan-Wigner mapping [2]. 
+        Participants can generate different format of the description of the hydroxyl's hamiltonian by prefered tools, but we restricted the fermionic mapping method should be the Jordan-Wigner mapping [2],
+        which should be 12 qubits and 631 pauli strings.
 		  </p>
 		  <p>
 		    The name of each text file contains the patient ID, labels, and index separated by a dash (i.e., ”-”). For example, for the file 
@@ -238,7 +233,7 @@
             [1] Cao, Yudong, Jhonathan Romero, and Alán Aspuru-Guzik. "Potential of quantum computing for drug discovery." IBM Journal of Research and Development 62.6 (2018): 6-1.
           </p>
           <p>
-            [2] Zanker, N., Schuster, D., Gilkerson, J. and Stein, K., 2016. Tachycardia detection in ICDs by Boston Scientific. Herzschrittmachertherapie+ Elektrophysiologie, 27(3), pp.186-192.
+            [2] Tranter, Andrew, et al. "A comparison of the Bravyi-Kitaev and Jordan-Wigner transformations for the quantum simulation of quantum chemistry." Journal of chemical theory and computation 14.11 (2018): 5617-5630.
           </p>
           <p>
             [3] Madhavan, M. and Friedman, P.A., 2013. Optimal programming of implantable cardiac-defibrillators. Circulation, 128(6), pp.659-672.
