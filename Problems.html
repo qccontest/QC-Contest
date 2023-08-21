@@ -96,30 +96,30 @@
             As we navigate the complex molecular interactions underlying medical therapies, there's an increasing emphasis on computational techniques to aid our endeavors.
             The recent rise of quantum computing offers a promising avenue to revolutionize drug discovery, offering potential solutions to problems previously considered insurmountable using classical computation [1].
             <br><br>
-            One such fundamental entity in the realm of pharmacology is the <b>hydroxyl (·OH)</b>. Known for its significant role in various physiological and pathological processes, 
-            the hydroxyl is not just a simple molecule but a pivot around which many drug interactions revolve. 
+            One such fundamental entity in the realm of pharmacology is the <b>hydroxyl radical (·OH)</b>. Known for its significant role in various physiological and pathological processes, 
+            the hydroxyl radical is not just a simple molecule but a pivot around which many drug interactions revolve. 
             This highly reactive species plays a role in oxidative stress, leading to numerous diseases such as neurodegenerative disorders, cardiovascular diseases, and even cancers. 
             It is also a core component of many drug compounds, contributing to their therapeutic effects.
           </p>
           <p>
-            Given its prominence, understanding the quantum mechanics of the hydroxyl  at an intricate level can significantly impact drug discovery processes. 
+            Given its prominence, understanding the quantum mechanics of the hydroxyl radical  at an intricate level can significantly impact drug discovery processes. 
             A fundamental starting point is the accurate determination of its ground state energy. This knowledge can serve as a cornerstone, upon which more complex drug-radical interactions can be built. 
             However, the quantum realm is notoriously challenging. With the current limitations in qubit numbers and quantum error rates, comprehensive simulations of larger drug molecules remain a distant goal. This is where the elegance of the hydroxyl radical comes into play. 
-            Its relatively smaller size offers a feasible task for current quantum computing capabilities, making it an ideal candidate for a quantum simulation challenge.
+            Its relatively smaller size offers a feasible task for current quantum computing capabilities, making it an ideal candidate for a quantum simulation challenge, and more importantly, paving the way towards the future research landscape that large scale is a fundamental need.
           </p>
           <p>
-            <img border="0" src="Figures/Hydroxyl3D.png" width="200" height="200">
+            <img border="0" src="Figures/hydroxyl radical3D.png" width="200" height="200">
             <img border="0" src="Figures/VQC.PNG" width="500" height="200">
           </p>
           <h5>
             2.Objective
           </h5>
           <p>
-            The goal of the 2023 Challenge is to calculate the ground state energy of the hydroxyl (·OH).
+            The goal of the 2023 Challenge is to calculate the ground state energy of the hydroxyl radical (·OH).
           </p>
           <p>
-            We ask participants to design and implen1 a working, open-source protocol that can automatically calcualte the ground state energy of the <b>hydroxyl (·OH)</b> from the give 
-            hamiltonian. We enable as large as the freedom in design space as we can. Participants can propose good qubits mapping strategy by codesign by hardware and software;
+            We ask participants to design and implement a working, open-source protocol that can automatically calcualte the ground state energy of the <b>hydroxyl radical (·OH)</b> from the give 
+            hamiltonian. We allow the participants to freely explore the design space, with some guidlines below. Participants can propose good qubits mapping strategy by codesign by hardware and software;
             classical shadow can be potentially implemented to reduce the shots on observable to save the cost on quantum resources; AI/ML or scientific-based circuit architecture search framwork
             could give a good ansatz for better performance; AI/ML or scientific-based error mitigation can also helps for better performance; last but not least, the experience of optimizer, initial
             paramter or initial scaling of the parameter are important topic for this challenge.
@@ -128,9 +128,9 @@
             3.Data
           </h5>
           <p>
-            The data provided for this challenge revolves around the central theme of drug discovery, focusing on the fundamental quantum mechanics of the hydroxyl (·OH). 
+            The data provided for this challenge revolves around the central theme of drug discovery, focusing on the fundamental quantum mechanics of the hydroxyl radical (·OH). 
             As a pivotal entity in numerous drug interactions and physiological processes, an intricate understanding of the hydroxyl radical is crucial. 
-            To aid participants in this endeavor, we've curated a specialized dataset tailored to encapsulate the of the hydroxyl's hamiltonian.
+            To aid participants in this endeavor, we've curated a specialized dataset tailored to encapsulate the of the hydroxyl radical's hamiltonian.
 
 			      We have provided the <a href="/"> the hamiltonian </a> for reference.
           </p>
@@ -138,8 +138,8 @@
 		    4.Data Format
 		  </h5>
 		  <p>
-		    All data is formatted in text. The text file contains the Pauli strings and corresponding coefficiencies of the hydroxyl's hamiltonian by Jordan-Wigner mapping [2]. 
-        Participants can generate different format of the description of the hydroxyl's hamiltonian by prefered tools, but we restricted the fermionic mapping method should be the Jordan-Wigner mapping [2],
+		    All data is formatted in text. The text file contains the Pauli strings and corresponding coefficiencies of the hydroxyl radical's hamiltonian by Jordan-Wigner mapping [2]. 
+        Participants can generate different format of the description of the hydroxyl radical's hamiltonian by prefered tools, but we restricted the fermionic mapping method should be the Jordan-Wigner mapping [2],
         which should be 12 qubits and 631 pauli strings.
 		  </p>
 
@@ -155,7 +155,7 @@
             Qiskit [3] offers tools that facilitate the simulation of quantum algorithms or circuits as if executed on an actual quantum device, complete with the associated noise. 
             Simulating a quantum system, complemented with a noise model, is imperative to gain insights into the potential performance of quantum algorithms on current NISQ (Noisy Intermediate-Scale Quantum) devices [4]. 
             We acknowledge that while participants might be inclined to optimize basis gates at the pulse level to curtail the duration of the quantum circuit and thereby conserve quantum resources [5], 
-            characterizing a time-dependent noise model from a real quantum machine poses challenges for us. We regretfully must resort to using the standard gate-based noise model for evaluating circuits. 
+            characterizing a time-dependent noise model from a real quantum machine poses unsolved obstacles in preparation for this quantum computing for drug discovery challenge. We regretfully must resort to using the standard gate-based noise model for evaluating circuits. 
             However, in the spirit of fairness, we will compute the relative decoherence fidelity and adjust your circuit performance accordingly [6].
           </p>
           <p>
@@ -168,8 +168,7 @@
 		  <p>
 			  We will employ specific metrics to evaluate the submitted algorithms. The assessment encompasses the accuracy in estimating the ground state energy, 
         the consumption of quantum resources (number of shots and duration of the quantum circuit), and the demand on classical computational resources (number of iterations and number of parameters). Specifically, the precision of the ground state energy estimation accounts for maximum 100 credts, the consumption of quantum resources represents maximum 25 credits, 
-        and the demand on classical computational resources contributes maximum 15 credits. And we require participants to self-reflect their techniques for maximum 10 points, these techniques should include 
-        the tricks implemented in the preprocessing process, and submit a short description of there used techniques. We will have three graders evaluate and do this extra 10 credits grading based on self-reflect score and other aspects include novelty, reasonability, and so on. 
+        and the demand on classical computational resources contributes maximum 15 credits. And we require participants to self-reflect their techniques for maximum 10 points, which should include the tricks implemented in the preprocessing process, and to submit a short description of their used techniques. We will have three graders evaluate and do this extra 10 credits grading based on self-reflect score and other aspects including novelty, reasonability, and so on. 
 		  </p> 
 		  <h5>
 		    7.Example Code
