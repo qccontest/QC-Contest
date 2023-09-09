@@ -162,14 +162,36 @@ parameter or initial scaling of the parameter are important topics for this chal
             The IBM <a href="https://qiskit.org/"> qiskit platform </a> is open for public and easy to access online. However, if you do 
             need support, please contact us.
           </p>
-		  <h5>
-		    6.Scoring
-		  </h5>
-		  <p>
-        We will employ specific metrics to evaluate the submitted algorithms. The assessment encompasses the accuracy of estimating the ground state energy,
-        the consumption of quantum resources (number of shots and duration of the quantum circuit) and the demand on classical computational resources (number of iterations and number of parameters). Specifically, the precision of the ground state energy estimation accounts for a maximum of 100 credits, the consumption of quantum resources represents a maximum of 25 credits,
-        and the demand on classical computational resources contributes a maximum of 15 credits. And we require participants to self-reflect on their techniques for a maximum of 10 points, which should include the tricks implemented in the preprocessing process, and to submit a short description of their used techniques. We will have three graders evaluate and grade this extra 10 credits based on self-reflect score and other aspects, including novelty, reasonability, and so on.
-		  </p> 
+          <h5>
+            6. Scoring
+        </h5>
+        <p>
+            Submissions will be meticulously evaluated based on specific metrics tailored to appraise the algorithms presented. The assessment framework is comprehensive and includes:
+        </p>
+        
+        <ul>
+            <li>
+                <strong>Ground State Energy Estimation Accuracy:</strong> This quantifies how adeptly an algorithm can gauge the energy of the base state. The precision here has a ceiling of 100 credits.
+            </li>
+            <li>
+                <strong>Quantum Resource Consumption:</strong> Consumption metrics mainly focus on two variables - the total number of shots and the overall duration of the quantum circuit. Both combined, they weigh in at 25 credits.
+                <ul>
+                    <li>
+                        <strong>Total Number of Shots:</strong> This pertains to the cumulative count of measurements or readings taken throughout the quantum circuit's lifetime.
+                    </li>
+                    <li>
+                        <strong>Circuit Duration:</strong> This relates to the time taken for the quantum circuit's complete execution.
+                    </li>
+                </ul>
+            </li>
+            <li>
+                <strong>Classical Computational Resources:</strong> This aspect will scrutinize the computational demand in terms of iterations and parameter volume, holding a value of up to 15 credits.
+            </li>
+            <li>
+                <strong>Technical Reflection & Description:</strong> Participants are mandated to introspect on their techniques, earning them up to 10 points. This introspection should be comprehensive, shedding light on innovative preprocessing tactics and a descriptive breakdown of the employed methodologies. A panel comprising three esteemed graders will grade this section. Their evaluation will be influenced by the self-reflective content and other salient parameters like novelty and reasonability.
+            </li>
+        </ul>
+        
 		  <h5>
 		    7.Example Code
 		  </h5>
