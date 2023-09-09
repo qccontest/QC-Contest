@@ -163,34 +163,54 @@ parameter or initial scaling of the parameter are important topics for this chal
             need support, please contact us.
           </p>
           <h5>
-            6. Scoring
+            Scoring Criteria
         </h5>
         <p>
-            Submissions will be meticulously evaluated based on specific metrics tailored to appraise the algorithms presented. The assessment framework is comprehensive and includes:
+            We will employ specific metrics to rigorously evaluate each submitted algorithm.
+        </p>
+    
+        <h4>Ground State Energy Estimation Accuracy</h4>
+        <p>
+            The accuracy of estimating the ground state energy is vital. This will be measured using the following formula:
+            <br>
+            <i>E<sub>score</sub> = (E<sub>estimated</sub>/E<sub>ideal</sub>) × 100</i>
+            <br>
+            Where, <i>E<sub>estimated</sub></i> represents the average result procured from the participant's framework across ten disparate seeds, while <i>E<sub>ideal</sub></i> is the objective value ascertained using classical computational methodologies. This precision component garners up to 100 credits.
         </p>
         
-        <ul>
-            <li>
-                <strong>Ground State Energy Estimation Accuracy:</strong> This quantifies how adeptly an algorithm can gauge the energy of the base state. The precision here has a ceiling of 100 credits.
-            </li>
-            <li>
-                <strong>Quantum Resource Consumption:</strong> Consumption metrics mainly focus on two variables - the total number of shots and the overall duration of the quantum circuit. Both combined, they weigh in at 25 credits.
-                <ul>
-                    <li>
-                        <strong>Total Number of Shots:</strong> This pertains to the cumulative count of measurements or readings taken throughout the quantum circuit's lifetime.
-                    </li>
-                    <li>
-                        <strong>Circuit Duration:</strong> This relates to the time taken for the quantum circuit's complete execution.
-                    </li>
-                </ul>
-            </li>
-            <li>
-                <strong>Classical Computational Resources:</strong> This aspect will scrutinize the computational demand in terms of iterations and parameter volume, holding a value of up to 15 credits.
-            </li>
-            <li>
-                <strong>Technical Reflection & Description:</strong> Participants are mandated to introspect on their techniques, earning them up to 10 points. This introspection should be comprehensive, shedding light on innovative preprocessing tactics and a descriptive breakdown of the employed methodologies. A panel comprising three esteemed graders will grade this section. Their evaluation will be influenced by the self-reflective content and other salient parameters like novelty and reasonability.
-            </li>
-        </ul>
+        <h4>Quantum Resource Consumption</h4>
+        <p>
+            The efficient utilization of quantum resources is paramount. This metric will be broken down into two principal parts:
+            <ul>
+                <li><strong>Total Number of Shots in Quantum Circuits:</strong>
+                    <ul>
+                        <li>3786000 shots (which equates to 631 Pauli strings x default 6000 shots): 15 points</li>
+                        <li>1800000 shots: 25 points</li>
+                        <li>For shots falling between 1800000 and 3786000: Points will be awarded based on the formula 
+                        <br>
+                        <i>15 + (3786000 - n) / (3786000 - 1800000) × 10</i>
+                        <br>
+                        Here, 'n' represents the total quantum circuit shots used by the participant.
+                        </li>
+                    </ul>
+                </li>
+                <li><strong>Circuit Size (Duration):</strong>
+                    <ul>
+                        <li>1st rank: 15 points</li>
+                        <li>Ranks 2 to 5: A decrement of 0.1 point per subsequent rank</li>
+                        <li>Ranks 6 to 10: A decrement of 0.2 points per subsequent rank</li>
+                        <li>Rankings beyond 10: A decrement of 0.3 points for each descending rank</li>
+                    </ul>
+                </li>
+            </ul>
+            The holistic quantum resource consumption metric is allocated a ceiling of 40 credits.
+        </p>
+        
+        <h4>Technical Reflection & Description</h4>
+        <p>
+            Beyond the quantitative assessment, we emphasize a qualitative evaluation. Participants are mandated to introspect and elucidate their technical methodologies. This should include a clear mention of any innovative pre-processing techniques or strategies employed, as well as any notable consumption of classical resources. This reflective and descriptive component can earn participants up to 10 points. These 10 credits will be discerningly evaluated by a panel of three expert graders, who will consider the depth of self-reflection, technical novelty, logical coherence, among other salient factors.
+        </p>
+    </div>
         
 		  <h5>
 		    7.Example Code
