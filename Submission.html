@@ -83,14 +83,47 @@
         </nav>
         <hr style="width: 100%; height: 2px;">
         <div class="container">
-          <h3>
-            Submission Requirements
-          </h3>
-          <p>
-            We will soon release the evaluation project to assess three metrics (i.e., accuracy, quantum resource cost, classical computation resource cost).
-		  </p>
-        </div>            
-      </div>
+            <h3>
+                Submission Guidelines
+            </h3>
+            <p>
+                To ensure a consistent and effective evaluation process, participants are advised to meticulously follow the outlined submission instructions:
+            </p>
+            <h4>1. File Format</h4>
+            <p>
+                - All design source files should be compressed and submitted as a `.ZIP` archive.
+            </p>
+            <h4>2. Circuit Design & Parameters</h4>
+            <p>
+                - Provide the optimized circuit structure and its corresponding optimal parameters.<br>
+                - Participants may utilize any platform for circuit design. However, the finalized circuit must:<br>
+                &emsp;• Be rendered in `QASM` format.<br>
+                &emsp;• Represent a transpiled circuit.
+            </p>
+            <h4>3. Optimization Techniques & Framework</h4>
+            <p>
+                - The submission repository should manifest techniques such as:<br>
+                &emsp;• Pauli grouping<br>
+                &emsp;• Error mitigation<br>
+                &emsp;• Transpiling optimization<br>
+                - Additionally, include a dedicated notebook file that:<br>
+                &emsp;• Illustrates the method to load circuits in `QASM` format.<br>
+                &emsp;• Explains subsequent optimizations, e.g., pauli grouping and error mitigation.<br>
+                &emsp;• Details the alignment with the qiskit estimator, allowing for its integration. It's recommended to test the framework's performance on the qiskit estimator using the supplied test seeds.
+            </p>
+            <h4>4. Documentation</h4>
+            <p>
+                - Ensure the inclusion of a `README.md` file. This document should:<br>
+                &emsp;• Provide a concise overview of the requirements.<br>
+                &emsp;• Detail the steps to execute the code.<br>
+                To preserve the fairness of evaluation, designs will undergo standardized assessments on the qiskit estimator using ten distinct seeds.
+            </p>
+            <p>
+                <strong>Proceed to submission using the link below.</strong>
+            </p>
+            <a href="#">Submission Link</a>
+        </div>
+        
       
     </div>
     <div class="card-footer text-muted text-center">
