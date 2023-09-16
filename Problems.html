@@ -162,14 +162,55 @@ parameter or initial scaling of the parameter are important topics for this chal
             The IBM <a href="https://qiskit.org/"> qiskit platform </a> is open for public and easy to access online. However, if you do 
             need support, please contact us.
           </p>
-		  <h5>
-		    6.Scoring
-		  </h5>
-		  <p>
-        We will employ specific metrics to evaluate the submitted algorithms. The assessment encompasses the accuracy of estimating the ground state energy,
-        the consumption of quantum resources (number of shots and duration of the quantum circuit) and the demand on classical computational resources (number of iterations and number of parameters). Specifically, the precision of the ground state energy estimation accounts for a maximum of 100 credits, the consumption of quantum resources represents a maximum of 25 credits,
-        and the demand on classical computational resources contributes a maximum of 15 credits. And we require participants to self-reflect on their techniques for a maximum of 10 points, which should include the tricks implemented in the preprocessing process, and to submit a short description of their used techniques. We will have three graders evaluate and grade this extra 10 credits based on self-reflect score and other aspects, including novelty, reasonability, and so on.
-		  </p> 
+          <h5>
+            Scoring Criteria
+        </h5>
+        <p>
+            We will employ specific metrics to rigorously evaluate each submitted algorithm.
+        </p>
+    
+        <h6>Ground State Energy Estimation Accuracy</h4>
+        <p>
+            The accuracy of estimating the ground state energy is vital. This will be measured using the following formula:
+            <br>
+            <i>E<sub>score</sub> = (1 - | (E<sub>estimated</sub> - E<sub>ideal</sub>) / E<sub>ideal</sub> |) × 100%</i>
+            <br>
+            Where, <i>E<sub>estimated</sub></i> represents the average result procured from the participant's framework across ten disparate seeds, while <i>E<sub>ideal</sub></i> is the objective value ascertained using classical computational methodologies. This precision component garners up to 100 credits.
+        </p>
+        
+        <h6>Quantum Resource Consumption</h4>
+        <p>
+            The efficient utilization of quantum resources is paramount. This metric will be broken down into two principal parts:
+            <ul>
+                <li><strong>Total Number of Shots of Quantum Circuits:</strong>
+                    <ul>
+                        <li>3786000 shots (which equates to 631 Pauli strings x default 6000 shots): 15 points</li>
+                        <li>Under 1800000 shots: 25 points</li>
+                        <li>For shots falling between 1800000 and 3786000: Points will be awarded based on the formula 
+                        <br>
+                        <i>15 + (3786000 - n) / (3786000 - 1800000) × 10</i>
+                        <br>
+                        Here, 'n' represents the total quantum circuit shots used by the participant.
+                        </li>
+                    </ul>
+                </li>
+                <li><strong>Circuit Size (Duration):</strong>
+                    <ul>
+                        <li>1st rank: 15 points</li>
+                        <li>Ranks 2 to 5: A decrement of 0.1 point per subsequent rank</li>
+                        <li>Ranks 6 to 10: A decrement of 0.2 points per subsequent rank</li>
+                        <li>Rankings beyond 10: A decrement of 0.3 points for each descending rank</li>
+                    </ul>
+                </li>
+            </ul>
+            The holistic quantum resource consumption metric is allocated a ceiling of 40 credits.
+        </p>
+        
+        <h6>Technical Reflection & Description</h4>
+        <p>
+            Beyond the quantitative assessment, we emphasize a qualitative evaluation. Participants are mandated to introspect and elucidate their technical methodologies. This should include a clear mention of any innovative pre-processing techniques or strategies employed, as well as any notable consumption of classical resources. This reflective and descriptive component can earn participants up to 10 points. These 10 credits will be discerningly evaluated by a panel of three expert graders, who will consider the depth of self-reflection, technical novelty, logical coherence, among other salient factors.
+        </p>
+        
 		  <h5>
 		    7.Example Code
 		  </h5>
