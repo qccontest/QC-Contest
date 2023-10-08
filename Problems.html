@@ -178,21 +178,32 @@ parameter or initial scaling of the parameter are important topics for this chal
             Where, <i>E<sub>estimated</sub></i> represents the average result procured from the participant's framework across ten disparate seeds, while <i>E<sub>ideal</sub></i> is the objective value ascertained using classical computational methodologies. This precision component garners up to 100 credits.
         </p>
         
-        <h6>Quantum Resource Consumption</h6>
+        <h6>Quantum Resource Consumption</h4>
         <p>
-            The optimal product of circuit size and shots is critical in determining the efficiency of a quantum solution. This metric will focus on the ranking of participants based on the product of their circuit size and the number of shots. The metric is divided into two main categories:
+            The efficient utilization of quantum resources is paramount. This metric will be broken down into two principal parts:
             <ul>
-                <li><strong>Product of Circuit and Shots Ranking:</strong>
+                <li><strong>Total Number of Shots of Quantum Circuits:</strong>
                     <ul>
-                        <li>1st rank (Lowest product of circuit x shots): 40 points</li>
-                        <li>Ranks 2 to 5: A decrement of 0.2 point per subsequent rank</li>
-                        <li>Ranks 6 to 10: A decrement of 0.4 points per subsequent rank</li>
-                        <li>Ranks 11 to 20: A decrement of 1 points for each descending rank</li>
-                        <li>Rankings beyond 20: 24 credits awarded</li>
+                        <li>3786000 shots (which equates to 631 Pauli strings x default 6000 shots): 15 points</li>
+                        <li>Under 1800000 shots: 25 points</li>
+                        <li>For shots falling between 1800000 and 3786000: Points will be awarded based on the formula 
+                        <br>
+                        <i>15 + (3786000 - n) / (3786000 - 1800000) × 10</i>
+                        <br>
+                        Here, 'n' represents the total quantum circuit shots used by the participant.
+                        </li>
+                    </ul>
+                </li>
+                <li><strong>Circuit Size (Duration):</strong>
+                    <ul>
+                        <li>1st rank: 15 points</li>
+                        <li>Ranks 2 to 5: A decrement of 0.1 point per subsequent rank</li>
+                        <li>Ranks 6 to 10: A decrement of 0.2 points per subsequent rank</li>
+                        <li>Rankings beyond 10: A decrement of 0.3 points for each descending rank</li>
                     </ul>
                 </li>
             </ul>
-            The total available credits for this metric is capped at 40 credits.
+            The holistic quantum resource consumption metric is allocated a ceiling of 40 credits.
         </p>
         
         <h6>Technical Reflection & Description</h4>
